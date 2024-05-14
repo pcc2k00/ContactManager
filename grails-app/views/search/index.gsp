@@ -8,7 +8,7 @@
 <g:form controller="search" action="result">
     <g:textField name="name" placeholder="Name"/>
     <g:textField name="email" placeholder="Email"/>
-    <g:textField name="phoneNumber" placeholder="Phone Number"/>
+    <g:textField name="phone" placeholder="Phone Number"/>
     <g:submitButton name="Search"/>
 </g:form>
 </body>

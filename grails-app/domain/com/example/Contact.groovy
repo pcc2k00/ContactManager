@@ -16,13 +16,13 @@ class Contact {
         address maxSize: 255
     }
 
-//    static mapping = {
-//        name index: 'idx_name', type: 'fulltext'
-//        email index: 'idx_email'
-//        phone index: 'idx_phone'
-//    }
+    static mapping = {
+        name index: 'idx_name'
+        email index: 'idx_email'
+        phone index: 'idx_phone'
+    }
 
     String toString() {
-        name + email
+        name
     }
 }

@@ -14,23 +14,21 @@ class SearchController {
         String searchName = params.name
         String searchEmail = params.email
         String searchPhone = params.phone
-
+        println(params.phone)
+        println(params.phone.getClass())
         // Build the query based on provided parameters
         def query = Contact.createCriteria()
         def results = query.list {
             if (searchName) {
                 ilike("name", "%${searchName}%")
             }
-            if (searchEmail) {
-                ilike("email", "%${searchEmail}%")
+            else if (searchEmail) {
+                ilike("email", "${searchEmail}")
             }
-            if (searchPhone) {
-                ilike("phone", "%${searchPhone}%")
+            else if (searchPhone) {
+                ilike("phone", "${searchPhone}")
             }
         }
-        log.error("Results type: ${results.class.name}, content: ${results}")
-        println(results)
-//        respond results, result: [searchCount: results.size()]
         respond(results, [model: [result: results, searchCount: results.size()]])
     }
 }
