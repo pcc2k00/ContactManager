@@ -80,7 +80,7 @@ grails:
     defaultScope: singleton
 dataSource:
   pooled: true
-  dbCreate: create
+  dbCreate: update
   url: jdbc:mysql://127.0.0.1:3306/contact_mgmt_db
   driverClassName: com.mysql.cj.jdbc.Driver
   dialect: org.hibernate.dialect.MySQL8Dialect

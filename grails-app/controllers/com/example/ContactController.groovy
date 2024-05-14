@@ -130,18 +130,25 @@ class ContactController {
 //            if (searchName) {
 //                ilike("name", "%${searchName}%")
 //            }
-//            if (searchEmail) {
+//           else if (searchEmail) {
 //                ilike("email", "%${searchEmail}%")
 //            }
-//            if (searchPhone) {
+//            else if (searchPhone) {
 //                ilike("phone", "%${searchPhone}%")
 //            }
 //        }
 ////        params.max = Math.min(max ?: 10, 100)
 ////        respond contactService.list(params), model:[contactCount: contactService.count()]
 //        // Respond with the search results
-//        respond results, model: [searchCount: results.size()]
+//        log.debug("Results type: ${results.class.name}, content: ${results}")
+//        println(results)
+////        respond results, model: [searchCount: results.size()]
+//
 //    }
+
+    def searchResults() {
+        render(view: 'searchResults', model: [searchResults: results])
+    }
 
     protected void notFound() {
         request.withFormat {
