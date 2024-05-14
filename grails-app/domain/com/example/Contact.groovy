@@ -23,6 +23,6 @@ class Contact {
 //    }
 
     String toString() {
-        name
+        name + email
     }
 }

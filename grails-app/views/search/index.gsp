@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Contacts</title>
+</head>
+<body>
+<h1>Search Contact</h1>
+<g:form controller="search" action="result">
+    <g:textField name="name" placeholder="Name"/>
+    <g:textField name="email" placeholder="Email"/>
+    <g:textField name="phoneNumber" placeholder="Phone Number"/>
+    <g:submitButton name="Search"/>
+</g:form>
+</body>
+</html>
+
 %{--<%@ page contentType="text/html;charset=UTF-8" %>--}%
 %{--<html>--}%
 %{--<head>--}%
@@ -28,3 +44,4 @@
 %{--</div>--}%
 %{--</body>--}%
 %{--</html>--}%
+
