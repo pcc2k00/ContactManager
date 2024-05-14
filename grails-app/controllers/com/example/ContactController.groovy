@@ -34,7 +34,7 @@ class ContactController {
 
     @Secured(['ROLE_ADMIN', 'ROLE_USER'])
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 25, 100)
         respond contactService.list(params), model:[contactCount: contactService.count()]
     }
 

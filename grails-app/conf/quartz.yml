@@ -1,0 +1,28 @@
+quartz:
+  autoStartup: true
+  jdbcStore: true
+  waitForJobsToCompleteOnShutdown: true
+  exposeSchedulerInRepository: false
+  scheduler:
+    instanceName: myScheduler
+    instanceId: AUTO
+
+  properties:
+    org:
+      quartz:
+        scheduler:
+          instanceName: "MyQuartzScheduler"
+          instanceId: "AUTO"
+
+        jobStore:
+          class: "org.quartz.simpl.RAMJobStore"
+
+        threadPool:
+          class: "org.quartz.simpl.SimpleThreadPool"
+          threadCount: 10
+          threadPriority: 5
+
+        plugin:
+          shutdownHook:
+            class: "org.quartz.plugins.management.ShutdownHookPlugin"
+            cleanShutdown: true
